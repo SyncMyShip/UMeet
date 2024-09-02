@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/UMeet/static/css/main.f855e6bc.css",
+    "main.js": "/UMeet/static/js/main.a5027033.js",
+    "static/js/453.1c3b2765.chunk.js": "/UMeet/static/js/453.1c3b2765.chunk.js",
+    "service-worker.js": "/UMeet/service-worker.js",
+    "static/media/logo.svg": "/UMeet/static/media/logo.103b5fa18196d5665a7e12318285c916.svg",
+    "index.html": "/UMeet/index.html",
+    "main.f855e6bc.css.map": "/UMeet/static/css/main.f855e6bc.css.map",
+    "main.a5027033.js.map": "/UMeet/static/js/main.a5027033.js.map",
+    "453.1c3b2765.chunk.js.map": "/UMeet/static/js/453.1c3b2765.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.a5027033.js"
+  ]
+}
