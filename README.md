@@ -12,7 +12,7 @@ I should be able to show/hide event details\
 So that I can view/hide the details about a specific event.
 
 #### 2. Specify Number of Events
-As a user,\ 
+As a user, \
 I should be able to filter the number of events returned\
 So that I can specify how many events are shown to me at a time.
 
@@ -22,7 +22,7 @@ I should be able to use UMeet offline\
 So that I can continue to use UMeet without internet connection.
 
 #### 4. Add an App Shortcut to the Home Screen
-As a user,\ 
+As a user, \
 I should be able to add an app shortcut to my Home Screen\
 So that I can easily access UMeet.
 
