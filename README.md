@@ -9,27 +9,27 @@ UMeet is a PWA (progressie web application) built with React and utilizing a TDD
 #### 1. Show/Hide Event Details
 As a user,\
 I should be able to show/hide event details\
-So that I can view/hide the details about a specific event.\
+So that I can view/hide the details about a specific event.
 
 #### 2. Specify Number of Events
 As a user,\ 
 I should be able to filter the number of events returned\
-So that I can specify how many events are shown to me at a time.\
+So that I can specify how many events are shown to me at a time.
 
 #### 3. Use the App When Offline
 As a user,\
 I should be able to use UMeet offline\
-So that I can continue to use UMeet without internet connection.\
+So that I can continue to use UMeet without internet connection.
 
 #### 4. Add an App Shortcut to the Home Screen
 As a user,\ 
 I should be able to add an app shortcut to my Home Screen\
-So that I can easily access UMeet.\
+So that I can easily access UMeet.
 
 #### 5. Display Charts Visualizing Event Details
 As a user,\
 I should be able to see a visual representation of events\
-So that I can see the events in my area represented in a different format.\
+So that I can see the events in my area represented in a different format.
 
 
 
