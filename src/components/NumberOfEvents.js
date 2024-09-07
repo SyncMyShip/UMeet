@@ -9,7 +9,6 @@ const NumberOfEvents = ({ setCount }) => {
   const handleInputChanged = (event) => {
     let value = (event.target.value, 15);
     event ? setNumber(value) : number
-    // setNumber(isNaN(value) ? 32 : value)
   }
  
   return (
