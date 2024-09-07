@@ -8,7 +8,7 @@ const NumberOfEvents = ({ setCount }) => {
 
   const handleInputChanged = (event) => {
     let value = (event.target.value, 15);
-    event ? setNumber(value) : number // eslint-disable-line no-use-before-define
+    event ? setNumber(value) : number // eslint-disable-line no-unused-expressions
   }
  
   return (
