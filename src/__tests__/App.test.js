@@ -14,6 +14,10 @@ describe('<App /> component', () => {
     });
 
     test('render CitySearch', () => {
-        expect(AppDOM.querySelector('#event-list')).toBeInTheDocument();
+        expect(AppDOM.querySelector('#city-search')).toBeInTheDocument();
     });
-});
+
+    test('render NumberOfEvents', () => { 
+        expect(AppDOM.querySelector('#event-count')).toBeInTheDocument(); 
+      });
+});webkitURL

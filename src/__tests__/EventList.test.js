@@ -16,7 +16,7 @@ describe('<EventList /> component', () => {
         expect(EventListComponent.getAllByRole("listitem")).toHaveLength(4);
     });
 
-    test('renders correct number of events', async () => {
+    test('lists correct number of events', async () => {
         const EventListComponent = render(<EventList />)
         const allEvents = await getEvents(); 
         EventListComponent.rerender(<EventList events={allEvents} />);
