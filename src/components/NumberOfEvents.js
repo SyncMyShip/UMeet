@@ -4,11 +4,12 @@ import { useState } from "react"
 // import PropTypes from 'prop-types'
 
 const NumberOfEvents = ({ setCount }) => {
-  const [number, setNumber] = useState(32)
+  const [number, setNumber] = useState("32")
 
   const handleInputChanged = (event) => {
-    let value = (event.target.value, 15);
-    event ? setNumber(value) : number // eslint-disable-line no-unused-expressions
+    let value = event.target.value;
+    setNumber(value)
+    // value ? setNumber(value) : number // eslint-disable-line no-unused-expressions
   }
  
   return (
@@ -25,8 +26,3 @@ const NumberOfEvents = ({ setCount }) => {
 }
 
 export default NumberOfEvents
-
-// NumberOfEvents.propTypes = {
-//   setCurrentNOE: PropTypes.func.isRequired,
-//   setErrorAlert: PropTypes.func.isRequired
-// }

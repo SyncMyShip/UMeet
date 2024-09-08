@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://SyncMyShip.github.io/UMeet",
   "dependencies": {
+    "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.5.2",
@@ -51,8 +52,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.1.1",
-    "http-server": "^14.1.1",
-    "serverless": "^4.2.5"
+    "gh-pages": "^6.1.1"
   }
 }

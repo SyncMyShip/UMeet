@@ -23,10 +23,9 @@ describe('<NumberOfEvents /> component', () => {
 
   test("user can change the number of events displayed", async () => {
     const eventCount = NumberOfEventsComponent.getByRole("textbox");
-    const user = userEvent.setup();
-    await user.type(eventCount, '{backspace}{backspace}15');
-    const allEvents = await getEvents();
-    NumberOfEventsComponent.rerender(<NumberOfEvents />)
-    expect(eventCount).toHaveValue("15"); 
+    const user = userEvent.setup(); 
+    await user.clear(eventCount)
+    await user.type(eventCount, "15");
+    expect(eventCount).toHaveValue("15");
   });
 });
