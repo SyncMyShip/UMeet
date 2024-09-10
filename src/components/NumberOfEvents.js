@@ -3,13 +3,13 @@
 import { useState } from "react"
 // import PropTypes from 'prop-types'
 
-const NumberOfEvents = ({ setCount }) => {
+const NumberOfEvents = ({ setCurrentNOE }) => {
   const [number, setNumber] = useState("32")
 
   const handleInputChanged = (event) => {
     let value = event.target.value;
     setNumber(value)
-    // value ? setNumber(value) : number // eslint-disable-line no-unused-expressions
+    setCurrentNOE(value)
   }
  
   return (
@@ -17,7 +17,7 @@ const NumberOfEvents = ({ setCount }) => {
         <input
             type="text"
             className="event-count"
-            placeholder="Enter event count"
+            placeholder="Number of Events:"
             value={number}
             onChange={handleInputChanged}
         />

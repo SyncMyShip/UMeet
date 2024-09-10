@@ -26,6 +26,8 @@ describe('<NumberOfEvents /> component', () => {
     const user = userEvent.setup(); 
     await user.clear(eventCount)
     await user.type(eventCount, "15");
+    const allEvents = await getEvents(); 
+    NumberOfEventsComponent.rerender(<NumberOfEvents setCurrentNOE={allEvents} />);   
     expect(eventCount).toHaveValue("15");
-  });
+  }); 
 });
