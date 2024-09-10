@@ -68,7 +68,14 @@ input[type="number"] {
   background-color: #bcdcdb;
 }
 
-.event-list {
+#event-list {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-self: center;
+  justify-content: stretch;
+}
+
+.event {
   padding: 10px 10px 35px;
   margin-bottom: 10px;
   text-align: left;
