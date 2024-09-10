@@ -9,7 +9,7 @@ import { getEvents } from "../api";
 describe('<NumberOfEvents /> component', () => { 
   let NumberOfEventsComponent;
   beforeEach(() => {
-    NumberOfEventsComponent = render(<NumberOfEvents />);
+    NumberOfEventsComponent = render(<NumberOfEvents setCurrentNOE={() => {}} />);
   });
 
   test('render element with role of textbox', () => { 
@@ -24,10 +24,7 @@ describe('<NumberOfEvents /> component', () => {
   test("user can change the number of events displayed", async () => {
     const eventCount = NumberOfEventsComponent.getByRole("textbox");
     const user = userEvent.setup(); 
-    await user.clear(eventCount)
-    await user.type(eventCount, "15");
-    const allEvents = await getEvents(); 
-    NumberOfEventsComponent.rerender(<NumberOfEvents setCurrentNOE={allEvents} />);   
+    await user.type(eventCount, "{backspace}{backspace}15");
     expect(eventCount).toHaveValue("15");
   }); 
 });
