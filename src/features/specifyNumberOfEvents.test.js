@@ -18,19 +18,19 @@ defineFeature(feature, test => {
     
     test('When user hasn’t specified a number, 32 events are shown by default.', ({ given, when, then }) => {
         given('a user searches for events', () => {
-            AppComponent = render(<App />);
+            AppDOM = render(<App setCurrentNOE={() => { }} />).container.firstChild;
         });
 
         when('a user doesn\'t define a specific number of events', () => {
         });
 
-        then('a list of 32 events will be returned', () => {
-            AppDOM = AppComponent.container.firstChild;
+        then('a list of 32 events will be returned', async () => {
             const EventListDOM = AppDOM.querySelector('#event-list');
-            NumberOfEventsComponent = render(<NumberOfEvents setCurrentNOE={() => {}} />, { container: EventListDOM });
-            const eventCount = NumberOfEventsComponent.getByRole("textbox"); 
 
-            expect(eventCount).toHaveValue("32");
+            await waitFor(() => {
+                const EventListItems = within(EventListDOM).queryAllByRole('listitem');
+                expect(EventListItems.length).toBe(32);
+            }); 
         });
     });
 
