@@ -12,13 +12,11 @@ import EventList from '../components/EventList';
 const feature = loadFeature('./src/features/specifyNumberOfEvents.feature');
 
 defineFeature(feature, test => {
-    let AppComponent;
-    let NumberOfEventsComponent;
     let AppDOM;
     
     test('When user hasn’t specified a number, 32 events are shown by default.', ({ given, when, then }) => {
         given('a user searches for events', () => {
-            AppDOM = render(<App setCurrentNOE={() => { }} />).container.firstChild;
+            AppDOM = render(<App />).container.firstChild;
         });
 
         when('a user doesn\'t define a specific number of events', () => {
@@ -36,21 +34,21 @@ defineFeature(feature, test => {
 
     test('User can change the number of events displayed.', ({ given, when, then }) => {
         given('a user searches for events', () => {
-            AppComponent = render(<App />).container.firstChild;
+            AppDOM = render(<App />).container.firstChild;
         });
 
         when('a user has defined a specific number of events', async () => {           
-            const EventListDOM = AppComponent.querySelector('#event-list');
-            NumberOfEventsComponent = render(<NumberOfEvents setCurrentNOE={() => { }} setErrorAlert={() => { }}/>, { container: EventListDOM }); 
-            
-            const eventCount = NumberOfEventsComponent.getByRole("textbox");
+            const eventCount = AppDOM.querySelector("#event-count input");
             const user = userEvent.setup(); 
 
             await user.type(eventCount, "{backspace}{backspace}15");
         });
 
         then('a list of events, equal to the number specified by the user, will be returned', async () => {
-            expect(NumberOfEventsComponent.getByRole("textbox")).toHaveValue("15");
+            const EventListDOM = AppDOM.querySelector('#event-list');
+            const EventListItems = within(EventListDOM).queryAllByRole('listitem');
+
+            expect(EventListItems.length).toBe(15);
         });
     });
 
