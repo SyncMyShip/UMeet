@@ -27,7 +27,7 @@ describe('<Event /> component', () => {
     
     // Scenario 1 - An event element is collapsed by default.
     test('event details are hidden by default', () => {
-        const eventDetails = EventComponent.container.querySelector('.event-details');
+        const eventDetails = EventComponent.container.querySelector('.details');
         expect(eventDetails).not.toBeInTheDocument();
     });
 
@@ -38,7 +38,7 @@ describe('<Event /> component', () => {
         await user.click(showDetailsButton);
 
         const eventDetailsDOM = EventComponent.container.firstChild;
-        const eventDetails = eventDetailsDOM.querySelector('.event-details');
+        const eventDetails = eventDetailsDOM.querySelector('.details');
         expect(eventDetails).toBeInTheDocument();
     });
 
