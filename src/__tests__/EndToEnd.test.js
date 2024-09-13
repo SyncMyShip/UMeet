@@ -8,9 +8,9 @@ describe('filter events by city', () => {
   let page;
   beforeAll(async () => {
     browser = await puppeteer.launch({
-      headless: false,
-      slowMo: 250,
-      timeout: 200 // change before commit
+      // headless: false,
+      // slowMo: 250,
+      // timeout: 200
     });
     page = await browser.newPage();
     await page.goto('http://localhost:3000/');
@@ -52,9 +52,9 @@ describe('show/hide an event details', () => {
   let page;
   beforeAll(async () => {
     browser = await puppeteer.launch({
-      headless: false,
-      slowMo: 250,
-      timeout: 200
+      // headless: false,
+      // slowMo: 250,
+      // timeout: 200
     });
     page = await browser.newPage();
     await page.goto('http://localhost:3000/');
