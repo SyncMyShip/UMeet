@@ -9,7 +9,10 @@ import { getEvents } from "../api";
 describe('<NumberOfEvents /> component', () => { 
   let NumberOfEventsComponent;
   beforeEach(() => {
-    NumberOfEventsComponent = render(<NumberOfEvents setCurrentNOE={() => {}} />);
+    NumberOfEventsComponent = render(<NumberOfEvents 
+      setCurrentNOE={() => {}}
+      setErrorAlert={() => {}} 
+    />);
   });
 
   test('render element with role of textbox', () => { 
