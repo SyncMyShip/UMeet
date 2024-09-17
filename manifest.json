@@ -34,7 +34,7 @@
   "description": "View upcoming events in your area.",
   "screenshots": [
     {
-     "src": "meet-app-512.png",
+      "src": "meet-app-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "form_factor": "wide",
@@ -42,9 +42,10 @@
     },
     {
       "src": "meet-app-512.png",
-       "sizes": "512x512",
-       "type": "image/png",
-       "label": "UMeet"
-     }
-]
+      "sizes": "512x512",
+      "type": "image/png",
+      "label": "UMeet"
+    }
+  ],
+  "id": "umeet-app"
 }
