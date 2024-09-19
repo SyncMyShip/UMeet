@@ -5,12 +5,14 @@ import {
     PieChart,
     Pie,
     Legend,
+    Cell,
     ResponsiveContainer
 } from 'recharts';
 
 const EventGenresChart = ({ events }) => {
     const [data, setData] = useState([]);
     const genres = ['React', 'JavaScript', 'Node', 'jQuery', 'AngularJS'];
+    const colors = ['#383B70', '#F0DD00', '#010BF0', '#706C38', '#F0A300']; // [indigo, gold, blue, olive, orange]
 
     useEffect(() => {
         setData(getData());
@@ -36,7 +38,7 @@ const EventGenresChart = ({ events }) => {
           <text
             x={x}
             y={y}
-            fill="#8884d8"
+            fill="000000"
             textAnchor={x > cx ? 'start' : 'end'}
             dominantBaseline="central"
           >
@@ -55,7 +57,11 @@ const EventGenresChart = ({ events }) => {
                     labelLine={false}
                     label={renderCustomizedLabel}
                     outerRadius={130}           
-                />
+                >
+                    {data.map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
+                    ))}
+                </Pie>
             </PieChart>
         </ResponsiveContainer>
       );

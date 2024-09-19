@@ -8,6 +8,7 @@ import {
     YAxis,
     CartesianGrid,
     Tooltip,
+    Cell,
     ResponsiveContainer
 } from 'recharts';
 
@@ -44,7 +45,11 @@ const CityEventsChart = ({ allLocations, events }) => {
             />
             <YAxis type="number" dataKey="count" name="Number of Events" allowDecimals={false} />
             <Tooltip cursor={{ strokeDasharray: '3 3' }} />
-            <Scatter name="A school" data={data} fill="#8884d8" />
+            <Scatter name="City Events" data={data} fill="#8884d8">
+                {data.map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={"#000000"} />
+                ))}
+            </Scatter>
           </ScatterChart>
         </ResponsiveContainer>
       );
