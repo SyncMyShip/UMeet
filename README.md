@@ -138,3 +138,23 @@ Feature 6: Display Charts Visualizing Event Details
     - When a user chooses to view data in the form of a chart
     - Then data visualization is displayed in reference to the relevant events
 ```
+
+
+## Local Testing
+
+1. Clone repo:
+```
+git clone https://github.com/SyncMyShip/UMeet.git
+```
+2. Switch to project directory:
+```
+cd UMeet
+```
+3. Start app:
+```
+npm run start
+```
+4. Run tests:
+```
+npm run test
+```
