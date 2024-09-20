@@ -13,11 +13,17 @@ import {
 } from 'recharts';
 
 const CityEventsChart = ({ allLocations, events }) => {
-    const [data, setData] = useState([]);
+    const [data, setData] = useState(() => {
+      const savedData = localStorage.getItem('cityEventsData');
+      return savedData ? JSON.parse(savedData) : [];
+  });
 
     useEffect(() => {
-        setData(getData());
-    }, [`${events}`]);
+      const newData = getData();
+      setData(newData);
+      localStorage.setItem('cityEventsData', JSON.stringify(newData));
+  }, [events]);
+
 
     const getData = () => {
         const data = allLocations.map((location) => {
